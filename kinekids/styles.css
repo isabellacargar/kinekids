@@ -469,11 +469,32 @@ footer {
     margin: 0 auto;
 }
 
-.games-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.games-group-title {
+    font-size: 1.6rem;
+    color: var(--accent-3);
+    margin: 3.5rem auto 1.5rem auto;
+    text-align: center;
+    position: relative;
+    font-weight: 800;
+}
+
+.games-group-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-1);
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
+}
+
+.games-row-3 {
+    display: flex;
+    justify-content: center;
     gap: 2.5rem;
-    margin-top: 3rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .interactive-game-card {
@@ -491,6 +512,8 @@ footer {
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
     position: relative;
     overflow: hidden;
+    flex: 1 1 300px;
+    max-width: 340px;
 }
 
 .interactive-game-card::before {
